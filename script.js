@@ -1,4 +1,3 @@
-
 // Cursor following effect
 let mouseX = 0, mouseY = 0;
 let cursorGlow = document.getElementById('cursorGlow');
@@ -155,3 +154,62 @@ document.querySelectorAll('.btn, .project-card, .tech-category, .social-link').f
         cursorGlow.style.opacity = '1';
     });
 });
+
+// System Monitor Animation
+function updateSystemMetrics() {
+    // Generate random values
+    const cpuUsage = Math.floor(Math.random() * 40) + 30; // 30-70%
+    const memoryUsage = Math.floor(Math.random() * 50) + 40; // 40-90%
+    const networkUsage = Math.floor(Math.random() * 60) + 20; // 20-80%
+    
+    // Generate random uptime
+    const hours = Math.floor(Math.random() * 24);
+    const minutes = Math.floor(Math.random() * 60);
+    const uptimeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+    
+    // Update values
+    document.getElementById('cpuValue').textContent = cpuUsage + '%';
+    document.getElementById('memoryValue').textContent = memoryUsage + '%';
+    document.getElementById('networkValue').textContent = networkUsage + '%';
+    document.getElementById('uptimeValue').textContent = uptimeString;
+    
+    // Update progress bars
+    document.getElementById('cpuProgress').style.width = cpuUsage + '%';
+    document.getElementById('memoryProgress').style.width = memoryUsage + '%';
+    document.getElementById('networkProgress').style.width = networkUsage + '%';
+    document.getElementById('uptimeProgress').style.width = '100%';
+    
+    // Update timestamp
+    const now = new Date();
+    const timestamp = now.toISOString();
+    document.getElementById('timestampLine').textContent = `[TIMESTAMP] ${timestamp}`;
+}
+
+// Initialize system monitor
+updateSystemMetrics();
+
+// Update system metrics every 2-5 seconds randomly
+function scheduleNextUpdate() {
+    const delay = Math.random() * 3000 + 2000; // 2-5 seconds
+    setTimeout(() => {
+        updateSystemMetrics();
+        scheduleNextUpdate();
+    }, delay);
+}
+
+scheduleNextUpdate();
+
+// Animate system monitor when section becomes visible
+const monitorObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            updateSystemMetrics();
+            monitorObserver.unobserve(entry.target);
+        }
+    });
+});
+
+const monitorSection = document.getElementById('monitor');
+if (monitorSection) {
+    monitorObserver.observe(monitorSection);
+}

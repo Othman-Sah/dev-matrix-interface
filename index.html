@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -36,6 +35,7 @@
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#terminal">TERMINAL</a></li>
                 <li><a href="#stack">STACK</a></li>
+                <li><a href="#monitor">MONITOR</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
@@ -241,6 +241,65 @@
                         <div class="progress-fill" data-width="80"></div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Monitor Section -->
+    <section id="monitor" class="system-monitor">
+        <div class="container">
+            <div class="section-title">
+                <h2>&gt; SYSTEM_MONITOR.EXE</h2>
+                <p>Real-time system performance metrics</p>
+            </div>
+
+            <div class="monitor-grid">
+                <div class="monitor-card">
+                    <div class="monitor-icon">⚙️</div>
+                    <div class="monitor-status-dot"></div>
+                    <div class="monitor-label">CPU_USAGE</div>
+                    <div class="monitor-value" id="cpuValue">49%</div>
+                    <div class="monitor-progress">
+                        <div class="monitor-progress-fill cpu-progress" id="cpuProgress"></div>
+                    </div>
+                </div>
+
+                <div class="monitor-card">
+                    <div class="monitor-icon">💾</div>
+                    <div class="monitor-status-dot"></div>
+                    <div class="monitor-label">MEMORY</div>
+                    <div class="monitor-value" id="memoryValue">64%</div>
+                    <div class="monitor-progress">
+                        <div class="monitor-progress-fill memory-progress" id="memoryProgress"></div>
+                    </div>
+                </div>
+
+                <div class="monitor-card">
+                    <div class="monitor-icon">📡</div>
+                    <div class="monitor-status-dot"></div>
+                    <div class="monitor-label">NETWORK</div>
+                    <div class="monitor-value" id="networkValue">65%</div>
+                    <div class="monitor-progress">
+                        <div class="monitor-progress-fill network-progress" id="networkProgress"></div>
+                    </div>
+                </div>
+
+                <div class="monitor-card">
+                    <div class="monitor-icon">📈</div>
+                    <div class="monitor-status-dot"></div>
+                    <div class="monitor-label">UPTIME</div>
+                    <div class="monitor-value" id="uptimeValue">20:10</div>
+                    <div class="monitor-progress">
+                        <div class="monitor-progress-fill uptime-progress" id="uptimeProgress"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="monitor-console">
+                <div class="console-line">[INFO] System monitoring active...</div>
+                <div class="console-line">[OK] All systems operational</div>
+                <div class="console-line">[DEBUG] Performance metrics updated</div>
+                <div class="console-line" id="timestampLine">[TIMESTAMP] 2025-06-27T20:10:20.165Z</div>
             </div>
         </div>
     </section>
