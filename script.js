@@ -156,16 +156,20 @@ document.querySelectorAll('.btn, .project-card, .tech-category, .social-link').f
 });
 
 // System Monitor Animation
+const startTime = new Date();
+
 function updateSystemMetrics() {
     // Generate random values
     const cpuUsage = Math.floor(Math.random() * 40) + 30; // 30-70%
     const memoryUsage = Math.floor(Math.random() * 50) + 40; // 40-90%
     const networkUsage = Math.floor(Math.random() * 60) + 20; // 20-80%
     
-    // Generate random uptime
-    const hours = Math.floor(Math.random() * 24);
-    const minutes = Math.floor(Math.random() * 60);
-    const uptimeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+    // Calculate real uptime
+    const now = new Date();
+    const uptimeMs = now.getTime() - startTime.getTime();
+    const uptimeHours = Math.floor(uptimeMs / (1000 * 60 * 60));
+    const uptimeMinutes = Math.floor((uptimeMs % (1000 * 60 * 60)) / (1000 * 60));
+    const uptimeString = `${uptimeHours.toString().padStart(2, '0')}:${uptimeMinutes.toString().padStart(2, '0')}`;
     
     // Update values
     document.getElementById('cpuValue').textContent = cpuUsage + '%';
@@ -180,7 +184,6 @@ function updateSystemMetrics() {
     document.getElementById('uptimeProgress').style.width = '100%';
     
     // Update timestamp
-    const now = new Date();
     const timestamp = now.toISOString();
     document.getElementById('timestampLine').textContent = `[TIMESTAMP] ${timestamp}`;
 }
