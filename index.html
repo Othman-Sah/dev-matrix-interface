@@ -1,24 +1,371 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dev-matrix-interface</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen - Full Stack Developer | Matrix Interface</title>
+    <meta name="description" content="High-tech portfolio showcasing modern web development skills with a cyberpunk aesthetic.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cursor Effects -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-secondary" id="cursorSecondary"></div>
+    <div class="cursor-crosshair" id="cursorCrosshair"></div>
 
-    <meta property="og:title" content="dev-matrix-interface" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <div class="logo-icon">⚡</div>
+                <span>DEV.MATRIX</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#terminal">TERMINAL</a></li>
+                <li><a href="#stack">STACK</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <div class="status">
+                <div class="status-indicator">
+                    <span>📡</span>
+                    <span>ONLINE</span>
+                </div>
+                <div id="currentTime"></div>
+            </div>
+        </nav>
+    </header>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="boot-messages">
+                    <div>[SYSTEM BOOT] Initializing developer profile...</div>
+                    <div>[OK] Loading neural networks...</div>
+                    <div>[OK] Establishing connection to the matrix...</div>
+                </div>
+
+                <h1 class="hero-title">
+                    <span style="color: white;">ALEX</span><span>.CHEN</span>
+                </h1>
+
+                <div class="hero-subtitle">
+                    <span style="color: #22c55e;">&gt; </span>
+                    <span style="color: white;" id="typedText"></span>
+                    <span class="typing-cursor" style="color: #22c55e;">|</span>
+                </div>
+
+                <p class="hero-description">
+                    Crafting digital experiences through code. Specializing in modern web technologies, system architecture, and creating solutions that push the boundaries of what's possible.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">
+                        <span>📥</span>
+                        <span>DOWNLOAD_CV.ZIP</span>
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <span>▶</span>
+                        <span>VIEW_PROJECTS</span>
+                    </a>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <div class="social-icon">🔗</div>
+                        <span>GITHUB</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <div class="social-icon">💼</div>
+                        <span>LINKEDIN</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="floating-dot dot-1"></div>
+        <div class="floating-dot dot-2"></div>
+        <div class="floating-dot dot-3"></div>
+    </section>
+
+    <!-- Terminal Section -->
+    <section id="terminal" class="terminal-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>&gt; SYSTEM_TERMINAL.EXE</h2>
+                <p>Interactive developer console</p>
+            </div>
+
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-controls">
+                        <div class="terminal-control control-red"></div>
+                        <div class="terminal-control control-yellow"></div>
+                        <div class="terminal-control control-green"></div>
+                    </div>
+                    <div class="terminal-title">terminal@matrix:~</div>
+                    <div></div>
+                </div>
+                <div class="terminal-content" id="terminalContent">
+                    <!-- Terminal content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="stack" class="tech-stack">
+        <div class="container">
+            <div class="section-title">
+                <h2>&gt; TECH_STACK.JSON</h2>
+                <p>Current technology proficiency levels</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h3>[FRONTEND]</h3>
+                    <div class="tech-item">
+                        <span class="tech-name">React</span>
+                        <span class="tech-level">95%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="95"></div>
+                    </div>
+
+                    <div class="tech-item">
+                        <span class="tech-name">Next.js</span>
+                        <span class="tech-level">90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="90"></div>
+                    </div>
+
+                    <div class="tech-item">
+                        <span class="tech-name">TypeScript</span>
+                        <span class="tech-level">88%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="88"></div>
+                    </div>
+
+                    <div class="tech-item">
+                        <span class="tech-name">Tailwind</span>
+                        <span class="tech-level">92%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="92"></div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>[BACKEND]</h3>
+                    <div class="tech-item">
+                        <span class="tech-name">Node.js</span>
+                        <span class="tech-level">85%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="85"></div>
+                    </div>
+
+                    <div class="tech-item">
+                        <span class="tech-name">Python</span>
+                        <span class="tech-level">80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="80"></div>
+                    </div>
+
+                    <div class="tech-item">
+                        <span class="tech-name">PostgreSQL</span>
+                        <span class="tech-level">82%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="82"></div>
+                    </div>
+
+                    <div class="tech-item">
+                        <span class="tech-name">MongoDB</span>
+                        <span class="tech-level">78%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="78"></div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>[DEVOPS]</h3>
+                    <div class="tech-item">
+                        <span class="tech-name">Docker</span>
+                        <span class="tech-level">75%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="75"></div>
+                    </div>
+
+                    <div class="tech-item">
+                        <span class="tech-name">AWS</span>
+                        <span class="tech-level">70%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="70"></div>
+                    </div>
+
+                    <div class="tech-item">
+                        <span class="tech-name">Kubernetes</span>
+                        <span class="tech-level">65%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="65"></div>
+                    </div>
+
+                    <div class="tech-item">
+                        <span class="tech-name">CI/CD</span>
+                        <span class="tech-level">80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="80"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>&gt; PROJECT_ARCHIVE.DB</h2>
+                <p>Recent development projects and experiments</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">NEURAL_COMMERCE</h3>
+                        <span class="project-status">DEPLOYED</span>
+                    </div>
+                    <p class="project-description">
+                        AI-powered e-commerce platform with real-time inventory management and predictive analytics
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Redis</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">🔗</a>
+                        <a href="#" class="project-link">📱</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">BLOCKCHAIN_WALLET</h3>
+                        <span class="project-status">BETA</span>
+                    </div>
+                    <p class="project-description">
+                        Secure cryptocurrency wallet with multi-chain support and DeFi integration
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Web3.js</span>
+                        <span class="tech-tag">Solidity</span>
+                        <span class="tech-tag">IPFS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">🔗</a>
+                        <a href="#" class="project-link">📱</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">QUANTUM_CHAT</h3>
+                        <span class="project-status">DEVELOPMENT</span>
+                    </div>
+                    <p class="project-description">
+                        End-to-end encrypted messaging platform with quantum-resistant cryptography
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">WebRTC</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">🔗</a>
+                        <a href="#" class="project-link">📱</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>&gt; ESTABLISH_CONNECTION.EXE</h2>
+                <p>Initialize secure communication channel</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 class="mb-4">[CONTACT_PROTOCOLS]</h3>
+                    <div class="mb-8">
+                        <div class="mb-4">📧 alex.chen@matrix.dev</div>
+                        <div class="mb-4">💬 Secure messaging available</div>
+                        <div class="mb-4">🌍 Timezone: UTC-5</div>
+                    </div>
+                    <div style="font-size: 0.75rem; color: rgba(34, 197, 94, 0.6);">
+                        <div>[INFO] Encryption: AES-256</div>
+                        <div>[INFO] Response time: &lt; 24 hours</div>
+                        <div>[STATUS] Available for new projects</div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3 class="mb-4">[MESSAGE_INTERFACE]</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label">USER_NAME:</label>
+                            <input type="text" class="form-input" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">EMAIL_ADDRESS:</label>
+                            <input type="email" class="form-input" placeholder="your.email@domain.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">MESSAGE_CONTENT:</label>
+                            <textarea class="form-textarea" placeholder="Enter your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <span>📤</span>
+                            <span>SEND_MESSAGE</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
 </html>
