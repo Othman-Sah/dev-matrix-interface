@@ -312,64 +312,230 @@
                 <p>Recent development projects and experiments</p>
             </div>
 
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">NEURAL_COMMERCE</h3>
-                        <span class="project-status">DEPLOYED</span>
-                    </div>
-                    <p class="project-description">
-                        AI-powered e-commerce platform with real-time inventory management and predictive analytics
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Next.js</span>
-                        <span class="tech-tag">TensorFlow</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Redis</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">🔗</a>
-                        <a href="#" class="project-link">📱</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">BLOCKCHAIN_WALLET</h3>
-                        <span class="project-status">BETA</span>
-                    </div>
-                    <p class="project-description">
-                        Secure cryptocurrency wallet with multi-chain support and DeFi integration
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Web3.js</span>
-                        <span class="tech-tag">Solidity</span>
-                        <span class="tech-tag">IPFS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">🔗</a>
-                        <a href="#" class="project-link">📱</a>
+            <div class="projects-layout">
+                <!-- Project List Sidebar -->
+                <div class="project-list">
+                    <h3>[PROJECT_LIST]</h3>
+                    <div class="project-list-scroll">
+                        <div class="project-item active" data-project="001">
+                            <div class="project-number">001</div>
+                            <div class="project-name">NEURAL_COMMERCE</div>
+                            <div class="project-status-badge deployed">DEPLOYED</div>
+                        </div>
+                        <div class="project-item" data-project="002">
+                            <div class="project-number">002</div>
+                            <div class="project-name">BLOCKCHAIN_WALLET</div>
+                            <div class="project-status-badge beta">BETA</div>
+                        </div>
+                        <div class="project-item" data-project="003">
+                            <div class="project-number">003</div>
+                            <div class="project-name">QUANTUM_CHAT</div>
+                            <div class="project-status-badge development">DEVELOPMENT</div>
+                        </div>
+                        <div class="project-item" data-project="004">
+                            <div class="project-number">004</div>
+                            <div class="project-name">AI_ANALYTICS</div>
+                            <div class="project-status-badge deployed">DEPLOYED</div>
+                        </div>
+                        <div class="project-item" data-project="005">
+                            <div class="project-number">005</div>
+                            <div class="project-name">CLOUD_ORCHESTRATOR</div>
+                            <div class="project-status-badge beta">BETA</div>
+                        </div>
+                        <div class="project-item" data-project="006">
+                            <div class="project-number">006</div>
+                            <div class="project-name">SECURITY_SCANNER</div>
+                            <div class="project-status-badge development">DEVELOPMENT</div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">QUANTUM_CHAT</h3>
-                        <span class="project-status">DEVELOPMENT</span>
+                <!-- Project Details -->
+                <div class="project-details">
+                    <div class="project-detail-content" id="project-001">
+                        <div class="project-detail-header">
+                            <h3>NEURAL_COMMERCE</h3>
+                            <div class="project-actions">
+                                <a href="#" class="project-action">📁</a>
+                                <a href="#" class="project-action">🔗</a>
+                            </div>
+                        </div>
+                        <div class="project-meta">
+                            <span>ID: 001</span>
+                            <span>TYPE: E-COMMERCE</span>
+                        </div>
+                        <p class="project-detail-description">
+                            AI-powered e-commerce platform with real-time inventory management and predictive analytics
+                        </p>
+                        <div class="project-tech-section">
+                            <div class="tech-section-title">TECH_STACK:</div>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Redis</span>
+                            </div>
+                        </div>
+                        <div class="project-info-section">
+                            <div>[INFO] Project loaded successfully</div>
+                            <div>[STATUS] DEPLOYED</div>
+                            <div>[LAST_UPDATED] 6/27/2025</div>
+                        </div>
                     </div>
-                    <p class="project-description">
-                        End-to-end encrypted messaging platform with quantum-resistant cryptography
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Vue.js</span>
-                        <span class="tech-tag">WebRTC</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">MongoDB</span>
+
+                    <div class="project-detail-content hidden" id="project-002">
+                        <div class="project-detail-header">
+                            <h3>BLOCKCHAIN_WALLET</h3>
+                            <div class="project-actions">
+                                <a href="#" class="project-action">📁</a>
+                                <a href="#" class="project-action">🔗</a>
+                            </div>
+                        </div>
+                        <div class="project-meta">
+                            <span>ID: 002</span>
+                            <span>TYPE: BLOCKCHAIN</span>
+                        </div>
+                        <p class="project-detail-description">
+                            Secure cryptocurrency wallet with multi-chain support and DeFi integration
+                        </p>
+                        <div class="project-tech-section">
+                            <div class="tech-section-title">TECH_STACK:</div>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Web3.js</span>
+                                <span class="tech-tag">Solidity</span>
+                                <span class="tech-tag">IPFS</span>
+                            </div>
+                        </div>
+                        <div class="project-info-section">
+                            <div>[INFO] Project loaded successfully</div>
+                            <div>[STATUS] BETA</div>
+                            <div>[LAST_UPDATED] 6/26/2025</div>
+                        </div>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">🔗</a>
-                        <a href="#" class="project-link">📱</a>
+
+                    <div class="project-detail-content hidden" id="project-003">
+                        <div class="project-detail-header">
+                            <h3>QUANTUM_CHAT</h3>
+                            <div class="project-actions">
+                                <a href="#" class="project-action">📁</a>
+                                <a href="#" class="project-action">🔗</a>
+                            </div>
+                        </div>
+                        <div class="project-meta">
+                            <span>ID: 003</span>
+                            <span>TYPE: MESSAGING</span>
+                        </div>
+                        <p class="project-detail-description">
+                            End-to-end encrypted messaging platform with quantum-resistant cryptography
+                        </p>
+                        <div class="project-tech-section">
+                            <div class="tech-section-title">TECH_STACK:</div>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">WebRTC</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+                        <div class="project-info-section">
+                            <div>[INFO] Project loaded successfully</div>
+                            <div>[STATUS] DEVELOPMENT</div>
+                            <div>[LAST_UPDATED] 6/25/2025</div>
+                        </div>
+                    </div>
+
+                    <div class="project-detail-content hidden" id="project-004">
+                        <div class="project-detail-header">
+                            <h3>AI_ANALYTICS</h3>
+                            <div class="project-actions">
+                                <a href="#" class="project-action">📁</a>
+                                <a href="#" class="project-action">🔗</a>
+                            </div>
+                        </div>
+                        <div class="project-meta">
+                            <span>ID: 004</span>
+                            <span>TYPE: ANALYTICS</span>
+                        </div>
+                        <p class="project-detail-description">
+                            Advanced AI-powered analytics dashboard with real-time data processing and visualization
+                        </p>
+                        <div class="project-tech-section">
+                            <div class="tech-section-title">TECH_STACK:</div>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">Redis</span>
+                            </div>
+                        </div>
+                        <div class="project-info-section">
+                            <div>[INFO] Project loaded successfully</div>
+                            <div>[STATUS] DEPLOYED</div>
+                            <div>[LAST_UPDATED] 6/24/2025</div>
+                        </div>
+                    </div>
+
+                    <div class="project-detail-content hidden" id="project-005">
+                        <div class="project-detail-header">
+                            <h3>CLOUD_ORCHESTRATOR</h3>
+                            <div class="project-actions">
+                                <a href="#" class="project-action">📁</a>
+                                <a href="#" class="project-action">🔗</a>
+                            </div>
+                        </div>
+                        <div class="project-meta">
+                            <span>ID: 005</span>
+                            <span>TYPE: DEVOPS</span>
+                        </div>
+                        <p class="project-detail-description">
+                            Automated cloud infrastructure orchestration tool with multi-cloud support
+                        </p>
+                        <div class="project-tech-section">
+                            <div class="tech-section-title">TECH_STACK:</div>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Go</span>
+                                <span class="tech-tag">Kubernetes</span>
+                                <span class="tech-tag">Terraform</span>
+                                <span class="tech-tag">AWS</span>
+                            </div>
+                        </div>
+                        <div class="project-info-section">
+                            <div>[INFO] Project loaded successfully</div>
+                            <div>[STATUS] BETA</div>
+                            <div>[LAST_UPDATED] 6/23/2025</div>
+                        </div>
+                    </div>
+
+                    <div class="project-detail-content hidden" id="project-006">
+                        <div class="project-detail-header">
+                            <h3>SECURITY_SCANNER</h3>
+                            <div class="project-actions">
+                                <a href="#" class="project-action">📁</a>
+                                <a href="#" class="project-action">🔗</a>
+                            </div>
+                        </div>
+                        <div class="project-meta">
+                            <span>ID: 006</span>
+                            <span>TYPE: SECURITY</span>
+                        </div>
+                        <p class="project-detail-description">
+                            Comprehensive security vulnerability scanner with automated reporting and remediation
+                        </p>
+                        <div class="project-tech-section">
+                            <div class="tech-section-title">TECH_STACK:</div>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Celery</span>
+                            </div>
+                        </div>
+                        <div class="project-info-section">
+                            <div>[INFO] Project loaded successfully</div>
+                            <div>[STATUS] DEVELOPMENT</div>
+                            <div>[LAST_UPDATED] 6/22/2025</div>
+                        </div>
                     </div>
                 </div>
             </div>

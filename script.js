@@ -216,3 +216,39 @@ const monitorSection = document.getElementById('monitor');
 if (monitorSection) {
     monitorObserver.observe(monitorSection);
 }
+
+// Project Archive Navigation
+document.querySelectorAll('.project-item').forEach(item => {
+    item.addEventListener('click', function() {
+        // Remove active class from all items
+        document.querySelectorAll('.project-item').forEach(i => i.classList.remove('active'));
+        
+        // Add active class to clicked item
+        this.classList.add('active');
+        
+        // Hide all project details
+        document.querySelectorAll('.project-detail-content').forEach(content => {
+            content.classList.add('hidden');
+        });
+        
+        // Show selected project detail
+        const projectId = this.getAttribute('data-project');
+        const projectDetail = document.getElementById(`project-${projectId}`);
+        if (projectDetail) {
+            projectDetail.classList.remove('hidden');
+        }
+    });
+});
+
+// Add hover effects to project items
+document.querySelectorAll('.project-item, .project-action').forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        cursorGlow.style.transform = 'translate(-50%, -50%) scale(1.2)';
+        cursorGlow.style.opacity = '0.8';
+    });
+    
+    element.addEventListener('mouseleave', () => {
+        cursorGlow.style.transform = 'translate(-50%, -50%) scale(1)';
+        cursorGlow.style.opacity = '1';
+    });
+});
